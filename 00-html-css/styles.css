@@ -215,7 +215,7 @@ main>section:nth-child(1) {
   gap: 10px
 }
 
-select{
+select {
   padding-left: 200px;
 }
 
@@ -260,7 +260,8 @@ form input[type="text"]::placeholder {
   color: #64748b;
 }
 
-form button[type="submit"] {
+form button[type="submit"],
+form button[type="submit"]:active {
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   background-color: var(--primary);
@@ -272,6 +273,8 @@ form button[type="submit"] {
   font-family: inherit;
   font-size: 1rem;
   white-space: nowrap;
+  transform: scale(0.9);
+
 }
 
 form button[type="submit"]:hover,
@@ -279,6 +282,10 @@ form button[type="submit"]:focus {
   background-color: var(--primary-hover);
   outline: 2px solid white;
   outline-offset: 2px;
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 /* Features Section */
@@ -437,7 +444,12 @@ main>section:nth-child(2)>div>article:nth-last-child(1) {
 .differentButton {
   background-color: var(--input-bg) !important;
   color: var(--primary-light) !important;
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
+
 
 .divEnFlex {
   display: flex;
@@ -494,6 +506,10 @@ main>section:nth-child(2)>div>article:nth-last-child(1) {
   font-family: inherit;
   font-size: 1rem;
   white-space: nowrap;
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 footer nav {
@@ -517,6 +533,10 @@ footer nav {
     &:focus {
       color: var(--text-secondary);
       outline: none;
+      background-color: var(--primary-light);
+    }
+
+    &.Is_active {
       background-color: var(--primary-light);
     }
   }
